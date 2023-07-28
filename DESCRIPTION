@@ -1,0 +1,11 @@
+Package: DMS
+Title: Adaptive changepoint inference in high dimension
+Version: 0.0.0.9000
+Authors@R: 
+    c(person("Guanghui", "Wang", , "ghwang.nk@gmail.com", role = c("aut", "cre")),
+    person("Long", "Feng", , "flnankai@nankai.edu.cn", role = "aut"))
+Description: Implements the double-max-sum (DMS) method for adaptive changepoint inference in high dimension, as proposed by Wang and Feng (2023) <doi:10.1093/jrsssb/qkad048>. Additionally, it offers various other adaptive testing approaches, including <doi:10.1111/rssb.12375> and <doi:10.1080/01621459.2021.1884562>, as well as non-adaptive ones, such as <doi:DOI: 10.1214/15-AOS1347>, <doi:10.1111/rssb.12406>, and <doi:10.1142/S201032631950014X>.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
