@@ -1,0 +1,73 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# DMS
+
+**Title**: Adaptive changepoint inference in high dimension
+
+**Description**: Implements the double-max-sum (DMS) method for adaptive
+changepoint inference in high dimension, as proposed by [Wang and Feng
+(2023)](https://doi.org/10.1093/jrsssb/qkad048). Additionally, it offers
+various other adaptive testing approaches, including [Liu, Zhang, Zhang
+and Liu (2020)](https://doi.org/10.1111/rssb.12375) and [Zhang, Wang and
+Shao (2022)](https://doi.org/10.1080/01621459.2021.1884562), as well as
+non-adaptive ones, such as [Jirak
+(2015)](https://doi.org/10.1214/15-AOS1347), [Yu and Chen
+(2021)](https://doi.org/10.1111/rssb.12406), and [Wang, Zou, Wang and
+Yin (2019)](https://doi.org/10.1142/S201032631950014X).
+
+## Installation
+
+You can install the development version of DMS from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ghwang-nk/DMS")
+```
+
+## Getting started
+
+``` r
+library(DMS)
+?DMS
+?LZZL20
+?ZWS22
+?J15
+?max_2sample
+?YC21
+?WZWY19
+```
+
+## References
+
+- Jirak, M. (2015) Uniform change point tests in high dimension. The
+  Annals of Statistics, 43, 2451–2483.
+- Liu, B., Zhou, C., Zhang, X. and Liu, Y. (2020) A Unified
+  Data-Adaptive Framework for High Dimensional Change Point Detection.
+  Journal of the Royal Statistical Society Series B: Statistical
+  Methodology, 82, 933–963.
+- Wang, G. and Feng, L. (2023) Computationally efficient and
+  data-adaptive changepoint inference in high dimension. Journal of the
+  Royal Statistical Society Series B: Statistical Methodology, 85,
+  936–958.
+- Wang, Y., Zou, C., Wang, Z. and Yin, G. (2019) Multiple change-points
+  detection in high dimension. Random Matrices: Theory and Applications,
+  08, 1950014.
+- Yu, M. and Chen, X. (2021) Finite Sample Change Point Inference and
+  Identification for High-Dimensional Mean Vectors. Journal of the Royal
+  Statistical Society Series B: Statistical Methodology, 83, 247–270.
+- Zhang, Y., Wang, R. and Shao, X. (2022) Adaptive Inference for Change
+  Points in High-Dimensional Data. Journal of the American Statistical
+  Association, 117, 1751–1762.
+
+## Acknowledgments
+
+We would like to express our sincere gratitude to [Professor Xiaofeng
+Shao](http://publish.illinois.edu/xshao/) for his invaluable assistance
+in helping us implement the ZWS22 test, as introduced by [Zhang, Wang
+and Shao (2022)](https://doi.org/10.1080/01621459.2021.1884562). The
+core implementation of the test is based on an adapted version of their
+Matlab code. For those interested, the original Matlab code can be
+accessed through this link:
+<https://doi.org/10.1080/01621459.2021.1884562>.
