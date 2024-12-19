@@ -4,7 +4,7 @@
 \alias{DMS}
 \title{DMS method for adaptive changepoint testing (for independent observations)}
 \usage{
-DMS(X, gam = 0, lam = NULL)
+DMS(X, gam = 0, lam = NULL, type = "Fisher")
 }
 \arguments{
 \item{X}{A data matrix of dimension \eqn{n\times p}, where each row represents an observation, and each column stands for a variable.}
@@ -12,6 +12,8 @@ DMS(X, gam = 0, lam = NULL)
 \item{gam}{A numeric value (\eqn{0} or \eqn{0.5}) indicating which version of the DMS statistic to use.}
 
 \item{lam}{An integer between \eqn{1} and \eqn{n/2}, representing a pre-specified boundary removal parameter if \code{gam = 0.5}.}
+
+\item{type}{A string indicating the method used to combine p-values from the max- and sum-based tests. Accepted values are "min", "Fisher", or "Cauchy".}
 }
 \value{
 \code{DMS} returns a list containing p-values of the DMS, max-, and sum-based testing procedures, respectively.

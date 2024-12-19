@@ -3,6 +3,7 @@
 #' @param X A data matrix of dimension \eqn{n\times p}, where each row represents an observation, and each column stands for a variable.
 #' @param gam A numeric value (\eqn{0} or \eqn{0.5}) indicating which version of the DMS statistic to use.
 #' @param lam An integer between \eqn{1} and \eqn{n/2}, representing a pre-specified boundary removal parameter if \code{gam = 0.5}.
+#' @param type A string indicating the method used to combine p-values from the max- and sum-based tests. Accepted values are "min", "Fisher", or "Cauchy".
 #'
 #' @return \code{DMS} returns a list containing p-values of the DMS, max-, and sum-based testing procedures, respectively.
 #'
@@ -32,7 +33,7 @@
 #' # [1] 0.005177261
 #' # $pv.Sum
 #' # [1] 1.565607e-05
-DMS <- function(X, gam = 0, lam = NULL) {
+DMS <- function(X, gam = 0, lam = NULL, type = "Fisher") {
 
   n <- nrow(X)
   p <- ncol(X)
@@ -64,7 +65,7 @@ DMS <- function(X, gam = 0, lam = NULL) {
   pv_sum <- WZWY19(X, CUSUM_2sample, PE = FALSE)$pv_sum
 
   # DMS ----
-  pv_DMS <- pvc(c(pv_max, pv_sum), type = "Fisher")
+  pv_DMS <- pvc(c(pv_max, pv_sum), type = type)
 
   return(list(pv.DMS = pv_DMS, pv.Max = pv_max, pv.Sum = pv_sum))
 }
